@@ -6,6 +6,12 @@ var snakeBody = [
 ];
 let newSegments = 0;
 
+
+var e = document.getElementById("color");
+var value = e.value;
+var text = e.options[e.selectedIndex].text;
+
+
 export function update(){
     addSegments();
     const inputDirection = getInputDirection();
@@ -22,6 +28,7 @@ export function draw(gameBoard){
         const snakeElement = document.createElement('div');
         snakeElement.style.gridRowStart = segment.y;
         snakeElement.style.gridColumnStart = segment.x;
+        snakeElement.style.backgroundColor= text;
         snakeElement.classList.add('snake');
         gameBoard.appendChild(snakeElement);
     })
@@ -51,6 +58,7 @@ function addSegments(){
         snakeBody.push({ ...snakeBody[snakeBody.length-1]});
     }
     newSegments = 0;
+    
 }
 export function getSnakeHead(){
     return snakeBody[0];

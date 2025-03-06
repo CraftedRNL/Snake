@@ -1,21 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Snek</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
 
 </head>
+
 <body>
-    
+    <div class="score">Score:<span id="count"> 0</span></div>
+    <button id="myBtn" type="button" class="btn btn-success">Customize</button>
     <div id="game-board">
-           
+
+    </div>
+    <div id="myModal" class="modal">
+
+        <div class="modal-content">
+            <div class="modal-content2">
+                <span class="close">&times;</span>
+                <select name="snakeColor" id="color">
+                    <option value="n/a">Change Snake Color</option>
+                    <option value="blue">blue</option>
+                    <option value="red">red</option>
+                    <option value="white">white</option>
+                    <option value="yellow">yellow</option>
+                    <option value="orange">orange</option>
+                    <option value="green">green</option>
+                </select>
+                <br>
+                <input type="number">
+            </div>
+        </div>
+
     </div>
 
 
 
-
     <script type="module" defer src="js/game.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
