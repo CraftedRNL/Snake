@@ -1,15 +1,20 @@
 import { getInputDirection } from "./input.js";
-
-export const SNAKE_SPEED = 25;
+let speedVar;
+export var SNAKE_SPEED = 10;
 var snakeBody = [
     { x: 11, y: 11}
 ];
 let newSegments = 0;
 
-
 var e = document.getElementById("color");
-var value = e.value;
 var text = e.options[e.selectedIndex].text;
+let name;
+let select = document.getElementById("color");
+select.addEventListener('change', function(){
+   name = select.options[select.selectedIndex].text;
+        console.log(name)
+
+})
 
 
 export function update(){
@@ -22,6 +27,8 @@ export function update(){
 
     snakeBody[0].x += inputDirection.x;
     snakeBody[0].y += inputDirection.y;
+    
+    
 }
 export function draw(gameBoard){
     snakeBody.forEach(segment =>{
@@ -30,7 +37,11 @@ export function draw(gameBoard){
         snakeElement.style.gridColumnStart = segment.x;
         snakeElement.style.backgroundColor= text;
         snakeElement.classList.add('snake');
+        snakeElement.id = ('snake');
         gameBoard.appendChild(snakeElement);
+        snakeElement.style.backgroundColor = name;
+         
+        changeSpeed();
     })
 
 }
@@ -62,4 +73,13 @@ function addSegments(){
 }
 export function getSnakeHead(){
     return snakeBody[0];
+}
+
+function changeSpeed() {
+    speedVar = document.getElementById("speed").value;
+    if(speedVar === ""){
+        speedVar = 1;
+    }
+    console.log(speedVar)
+    SNAKE_SPEED = speedVar;
 }

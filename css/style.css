@@ -5,12 +5,14 @@ body{
     justify-content: center;
     align-items: center;
     margin: 0;
-    background-color: rgb(121, 179, 119);
+    background-image: url("../img/dirt.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
    
 }
 
 #game-board{
-    background-color: #CCC;
+    background-color: #cccccc49;
     width: 100vmin;
     height: 100vmin;
     display: grid;
@@ -29,7 +31,7 @@ border: .25vmin solid black;
     border: .25vmin solid black;
 }
 .score{
-    color: rgba(56, 56, 56, 0.466) ;
+    color: rgba(10, 10, 10, 0.466) ;
     font-size: 100px;
     position: absolute;
     top: 1px;
@@ -43,7 +45,7 @@ border: .25vmin solid black;
     height: 50px;
     border: 1px rgb(0, 0, 0) solid;
     border-radius: 10px;
-    
+    background-color: #96969642;
 }
 
 

@@ -9,6 +9,7 @@ export function update(){
         expandSnake(EXPANSION_RATE)
         food = getRandomFoodPosition();
         document.getElementById("count").innerText = score;
+        
     }
     
 }

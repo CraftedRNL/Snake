@@ -10,7 +10,7 @@ const gameBoard = document.getElementById('game-board');
 function main(currentTime){
     if(gameOver){
        if(confirm("you lost.")){
-        location.reload();
+        window.location.reload();
     }
        return
     }
@@ -56,3 +56,6 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+
+

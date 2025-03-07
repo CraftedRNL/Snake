@@ -19,11 +19,13 @@
     </div>
     <div id="myModal" class="modal">
 
-        <div class="modal-content">
+        <div class="modal-content text-center">
             <div class="modal-content2">
                 <span class="close">&times;</span>
-                <select name="snakeColor" id="color">
-                    <option value="n/a">Change Snake Color</option>
+                <h1 class="center mt-5">Customize Your Snake:</h1>
+                <span class="text">Change Snake Color:</span> 
+                <select class=" mt-5" name="snakeColor" id="color">
+                    <option value="n/a">N/A</option>
                     <option value="blue">blue</option>
                     <option value="red">red</option>
                     <option value="white">white</option>
@@ -32,7 +34,9 @@
                     <option value="green">green</option>
                 </select>
                 <br>
-                <input type="number">
+                <span class="text">Change Snake Speed:</span>
+                <input class="mt-5" type="text" id="speed" name="speed">
+                <input type="submit" value="Submit">
             </div>
         </div>
 
